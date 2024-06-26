@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aq2</title>
+</head>
+<body>
+    <form action="/server">
+        <div>
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="name"><br>
+        </div>
+        <div>
+            Sex:
+            <input type="radio" name="sex" id="m" value="m">
+            <label for="m">Male</label>
+            <input type="radio" name="sex" id="f" value="f">
+            <label for="f">Female</label><br>
+        </div>
+        <div>
+            <label for="mess">Message:</label><br>
+            <textarea  name="feedback" id="mess" rows="4"></textarea>
+        </div>
+        <div>
+            <label for="con">Country</label>
+            <select name="country" id="con">
+                <option selected>Select an option</option>
+                <option value="america">America</option>
+                <option value="russia">Russia</option>
+                <option value="india">India</option><br>
+            </select>
+        </div>
+        <div>
+            <input type="checkbox" id="sub" name="sub">
+            <label for="sub">Subscribe?</label>
+        </div>
+            <button>Submit</button>
+        </form>
+</body>
+</html>

@@ -1,0 +1,16 @@
+/* h2{
+    display: inline;
+
+}
+span{
+    display: block;
+} */
+
+span{
+    /* background-color: pink; */
+    border: 2px solid black;
+    height: 100px;
+    width: 20px;
+    padding: 50px;
+    margin: 20px;
+}
