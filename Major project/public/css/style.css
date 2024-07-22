@@ -1,6 +1,6 @@
-body{
+/* body{
     background-color: pink;
-}
+} */
 
 /* Navbar */
 .navbar{
@@ -8,8 +8,7 @@ body{
 };
 
 .fa-compass{
-    color:#fe424d;
-    font-size: 2rem;
+    color: #fe424d;
 };
 
 .nav-link{
