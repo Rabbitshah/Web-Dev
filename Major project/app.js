@@ -29,7 +29,7 @@ app.use(express.static(path.join(__dirname,"/public")));
 
 
 app.listen(8080, () => {
-  console.log("server is listening to 3000");
+  console.log("server is listening to 8080");
 });
 
 app.get("/", (req, res) => {
