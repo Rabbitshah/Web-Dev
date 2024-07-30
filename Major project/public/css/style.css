@@ -111,3 +111,7 @@ body{
 .btns{
     display: flex;
 }
+
+.show-card{
+    padding-left: 0;
+}
