@@ -5,7 +5,7 @@
         </div>
         <div class="card col-6 offset-3 show-card">
             <img src="<%= listing.image %>" class="card-img-top show-img" alt="listing_image">
-            <div class="card-body">a d
+            <div class="card-body">
                 <p class="card-text">
                     <b><%= listing.title %></b> <br>
                     <%= listing.description %> <br>
@@ -18,8 +18,8 @@
    
 </div>
 
-<div class="btns">
-    <a href="/listings/<%= listing._id %>/edit" class="btn btn-dark col-1 offset-3 edit-btn">Edit</a>
+<div class="btns col-1  offset-3  ">
+    <a href="/listings/<%= listing._id %>/edit" class="btn btn-dark edit-btn">Edit</a>
 
     <form action="/listings/<%= listing._id %>?_method=DELETE" method="POST">
         <button class="btn btn-dark offset-5">Delete</button>
