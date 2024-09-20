@@ -54,14 +54,14 @@ app.get("/listings/:id",wrapAsync(  async (req, res) => {
 
 // Create Route
 app.post("/listings", wrapAsync( async (req, res, next) => {
-    // let { listing } = req.body;
-    // let newListing = await new Listing({ ...listing });
-    // console.log(newListing);
-    // newListing.save();
     if(!req.body.listing){
       throw new ExpressError("Invalid listing data", 400);  
     }
     const newListing = new Listing(req.body.listing);
+    if(!newListing.description){
+      throw new ExpressError("Description is missing", 400);
+    }
+
     await newListing.save();
     res.redirect("/listings");
 }));
@@ -94,7 +94,8 @@ app.all("*", (req,res, next) => {
 
 app.use((err,req,res,next) => {
   let {statusCode=500, message="Something went wrong"} = err;
-  res.status(statusCode).send(message);
+  res.status(statusCode).render("error.ejs",{message});
+  // res.status(statusCode).send(message);
 });
 
 app.listen(8080, () => {
