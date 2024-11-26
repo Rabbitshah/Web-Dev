@@ -38,8 +38,8 @@ const sessionOptions = {
   resave: false,
   saveUninitialized: true,
   cookie: {
-    expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
-    maxAge: 1000 * 60 * 60 * 24 * 7,
+    expires: Date.now() + 7 * 24 * 60 * 60 * 1000,
+    maxAge: 7 * 24 * 60 * 60 * 1000,
     httpOnly: true,
   },
 };
@@ -49,12 +49,12 @@ app.get("/", (req, res) => {
 });
 
 app.use(session(sessionOptions));
-app.use(flash);
+app.use(flash());
 
 app.use((req, res, next) => {
   res.locals.success = req.flash("success");
   next();
-})
+});
 
 app.use("/listings", listings);
 app.use("/listings/:id/reviews", reviews);
