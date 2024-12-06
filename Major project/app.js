@@ -8,7 +8,7 @@ const ExpressError = require("./utils/expressError.js");
 const session = require("express-session");
 const flash = require("connect-flash");
 const passport = require("passport");
-const localStrategy = require("passport-local");
+const LocalStrategy = require("passport-local");
 const User = require("./models/user.js");
 
 
@@ -51,6 +51,8 @@ const sessionOptions = {
 app.get("/", (req, res) => {
   res.send("hello im root");
 });
+
+// PASSPORT CONFIG
 
 app.use(session(sessionOptions));
 app.use(flash());
