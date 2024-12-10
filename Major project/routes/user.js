@@ -44,9 +44,9 @@ router.post(
   }),
   wrapAsync(async (req, res) => {
     req.flash("success", "Welcome back!");
-    // const redirectUrl = req.session.returnTo || "/listings";
+    const redirectUrl = res.locals.returnTo || "/listings";
     // delete req.session.returnTo;
-    res.redirect(req.locals.redirectUrl);
+    res.redirect(redirectUrl);
   })
 );
 
